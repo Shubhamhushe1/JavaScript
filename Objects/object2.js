@@ -62,3 +62,31 @@ console.log(Object.keys(bumbleUser));          // Output => [ 'id', 'name', 'age
 console.log(Object.values(bumbleUser));        // Output => [ 1, 'Shikha', 22, 'shikha22@google.com', true ] // Object.values(ObjectName) is use to get values only from Object
 console.log(Object.entries(bumbleUser));       // Output => [[ 'id', 1 ],[ 'name', 'Shikha' ],[ 'age', 22 ],[ 'mail', 'shikha22@google.com' ],[ 'isLoggedOut', true ]]  // We will get seperate Array for each key 
 console.log(bumbleUser.hasOwnProperty('isLoggedIn'));  // We use .hasOwnProperty to know the specific key or value is present in the Object or not  
+
+
+
+const users =[
+    
+    {
+        no:1,
+        naam:"A"
+    },
+
+    {
+        no:2,                                           // This kind of data come when we fetch all the data from the database to perform operations, multiple details in single object
+        naam:"B"
+    },
+
+    {
+        no:3,
+        naam:"C"
+    }
+
+
+]
+
+console.log(users[0]);  //      Output =>     { no: 1, naam: 'A' }
+console.log(users[1]);  //      Output =>     { no: 2, naam: 'B' }   // using index no. we can get specific details
+console.log(users[2]);  //      Output =>     { no: 3, naam: 'C' }
+
+users[0].id // we can get specific details too
