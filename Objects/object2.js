@@ -118,7 +118,7 @@ console.log(coursename);         // we can destructure like this too
 // Example of JSON 
 
 {
-    "employees":[
+    "employees"[                                         // In this after "employees" (:) we have to put colons but this editor gives error so we removed it but in syntax (:) is must 
         {"firstName":"John", "lastName":"Doe"},
         {"firstName":"Anna", "lastName":"Smith"},
         {"firstName":"Peter", "lastName":"Jones"}
