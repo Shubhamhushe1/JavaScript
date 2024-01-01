@@ -11,7 +11,7 @@ tinderUser.name = "Samay"
 tinderUser.eMail = "samay@google.com"
 tinderUser.isLoggedIn = false
 
-console.log(tinderUser);         // Output => { id: 1, name: 'Samay', eMail: 'samay@google.com', isLoggedIn: false } 
+// console.log(tinderUser);         // Output => { id: 1, name: 'Samay', eMail: 'samay@google.com', isLoggedIn: false } 
 
 const regularUser = {
 
@@ -24,7 +24,7 @@ const regularUser = {
     }
 }                                      // We can declare object within object as much as you can we can access also 
 
-console.log(regularUser);             // Output =>  {id: 1,fullName: { userFullName: { firstName: 'Ram', lastName: 'Lala' } } }
+// console.log(regularUser);             // Output =>  {id: 1,fullName: { userFullName: { firstName: 'Ram', lastName: 'Lala' } } }
 
 const obj1 = {1: "A", 2: "B", 3: "C"}
                                                         // Megerging to Objects 
@@ -38,10 +38,27 @@ const obj2 = {1: "D", 2: "E", 3: "F"}
 // const obj3 = Object.assign({},obj1, obj2)   // Another way to add objects 
 
 const x = {1: "A", 2: "B"};
-const y = {1: "A", 2: "B"};
+const y = {3: "A", 4: "B"};
 
 const z = {...x, ...y};     // we can add objects throud Spread Operator too just like arrays
-console.log(z);                                                 
+// console.log("Using Spread Operator :", z);     // Output => Using Spread Operator : { '1': 'A', '2': 'B', '3': 'A', '4': 'B' }                                             
 
-// not done
+// const objxy = Object.assign({},x,y)     // Object.assign({},x,y)  Object.assign () is method to add objects into single array, for better code structure we have to put {} before variables.        
+// console.log(objxy);                    // Output => { '1': 'A', '2': 'B', '3': 'A', '4': 'B' }  
 
+
+const bumbleUser = {
+
+id:1,
+name: "Shikha",
+age :22,
+mail:"shikha22@google.com",
+isLoggedOut:true
+
+}
+
+console.log(bumbleUser);
+console.log(Object.keys(bumbleUser));          // Output => [ 'id', 'name', 'age', 'mail', 'isLoggedOut' ] // Object.Keys(ObjectName) is use to get key of the data from Object
+console.log(Object.values(bumbleUser));        // Output => [ 1, 'Shikha', 22, 'shikha22@google.com', true ] // Object.values(ObjectName) is use to get values only from Object
+console.log(Object.entries(bumbleUser));       // Output => [[ 'id', 1 ],[ 'name', 'Shikha' ],[ 'age', 22 ],[ 'mail', 'shikha22@google.com' ],[ 'isLoggedOut', true ]]  // We will get seperate Array for each key 
+console.log(bumbleUser.hasOwnProperty('isLoggedIn'));  // We use .hasOwnProperty to know the specific key or value is present in the Object or not  
